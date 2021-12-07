@@ -5,9 +5,12 @@
   "type": "object",
   "title": "Schema of map compositions supported in Hslayers-ng",
   "required": [
+    "describedBy",
+    "schema_version",
     "abstract",
     "title",
     "extent",
+    "nativeExtent",
     "projection",
     "layers"
   ],
