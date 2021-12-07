@@ -1,7 +1,7 @@
 {
   "definitions": {},
   "$schema": "http://json-schema.org/draft-07/schema#",
-  "$id": "https://raw.githubusercontent.com/hslayers/map-compositions/1.0.0/schema.json",
+  "$id": "https://raw.githubusercontent.com/hslayers/map-compositions/2.0.0/schema.json",
   "type": "object",
   "title": "Schema of map compositions supported in Hslayers-ng",
   "required": [
@@ -12,6 +12,17 @@
     "layers"
   ],
   "properties": {
+    "describedBy": {
+      "description": "The URL reference to the schema.",
+      "type": "string",
+      "pattern": "https://raw.githubusercontent.com/hslayers/map-compositions/(([0-9]{1,}.[0-9]{1,}.[0-9]{1,})|([a-zA-Z]*?))/schema.json"
+    },
+    "schema_version": {
+      "description": "The version number of the schema in model.revision.addition format.",
+      "type": "string",
+      "pattern": "^[0-9]{1,}.[0-9]{1,}.[0-9]{1,}$",
+      "example": "1.2.0"
+    },
     "abstract": {
       "$id": "#/properties/abstract",
       "type": "string",
@@ -48,14 +59,32 @@
       "title": "Composition extent in EPSG:4326",
       "items": {
         "$id": "#/properties/extent/items",
-        "type": "string",
+        "type": "number",
         "title": "The Items Schema",
         "default": "",
         "examples": [
-          "14.62",
-          "50.58",
-          "15.42",
-          "50.82"
+          14.62,
+          50.58,
+          15.42,
+          50.82
+        ],
+        "pattern": "^(.*)$"
+      }
+    },
+    "nativeExtent": {
+      "$id": "#/properties/extent",
+      "type": "array",
+      "title": "Map extent in the native (original) coordinate system of the composition",
+      "items": {
+        "$id": "#/properties/extent/items",
+        "type": "number",
+        "title": "The Items Schema",
+        "default": "",
+        "examples": [
+          1672068,
+          6568819,
+          1672168,
+          6568919
         ],
         "pattern": "^(.*)$"
       }
@@ -137,8 +166,7 @@
     "center": {
       "$id": "#/properties/center",
       "type": "array",
-      "title": "Center of composition",
-      "description": "Currently not supported in HsLayers",
+      "title": "Map center in the native (original) coordinate system of the composition",
       "items": {
         "$id": "#/properties/center/items",
         "type": "number",
