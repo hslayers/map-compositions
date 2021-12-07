@@ -59,7 +59,7 @@
     "extent": {
       "$id": "#/properties/extent",
       "type": "array",
-      "title": "Composition extent in EPSG:4326",
+      "title": "Composition extent in EPSG:4326 as list of four values: [min longitude, min latitude, max longitude, max latitude].",
       "items": {
         "$id": "#/properties/extent/items",
         "type": "number",
