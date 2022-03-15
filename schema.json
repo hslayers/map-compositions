@@ -124,22 +124,203 @@
         }
       }
     },
-    "groups": {
-      "$id": "#/properties/groups",
+    "contact": {
+      "$id": "#/properties/contact",
       "type": "object",
-      "title": "The Groups Schema",
-      "description": "Used in status manager but not in hslayers",
+      "title": "Point of Contact",
+      "description": "Metadata contact of the organisation responsible for the creation and maintenance of the metadata",
       "required": [
-        "guest"
+        "organization"
       ],
       "properties": {
-        "guest": {
-          "$id": "#/properties/groups/properties/guest",
+        "person": {
+          "$id": "#/properties/contact/properties/person",
           "type": "string",
-          "title": "The Guest Schema",
+          "title": "Person name",
           "default": "",
           "examples": [
-            "r"
+            "John Olivander"
+          ],
+          "pattern": "^(.*)$"
+        },
+        "organization": {
+          "$id": "#/properties/contact/properties/organization",
+          "type": "string",
+          "title": "Organization name",
+          "default": "",
+          "examples": [
+            "Metabusiness inc."
+          ],
+          "pattern": "^(.*)$"
+        },
+        "address": {
+          "$id": "#/properties/contact/properties/address",
+          "type": "string",
+          "title": "Road, no., PO Box, etc.",
+          "default": "",
+          "examples": [
+            "Sesame Street 145"
+          ],
+          "pattern": "^(.*)$"
+        },
+        "city": {
+          "$id": "#/properties/contact/properties/city",
+          "type": "string",
+          "title": "City",
+          "default": "",
+          "examples": [
+            "Pilsen"
+          ],
+          "pattern": "^(.*)$"
+        },
+        "postalCode": {
+          "$id": "#/properties/contact/properties/postalCode",
+          "type": "string",
+          "title": "Postal code",
+          "default": "",
+          "examples": [
+            "312 00"
+          ],
+          "pattern": "^(.*)$"
+        },
+        "country": {
+          "$id": "#/properties/contact/properties/country",
+          "type": "string",
+          "title": "Country",
+          "default": "",
+          "examples": [
+            "Czech Republic"
+          ],
+          "pattern": "^(.*)$"
+        },
+        "phone": {
+          "$id": "#/properties/contact/properties/phone",
+          "type": "string",
+          "title": "Phone no.",
+          "default": "",
+          "examples": [
+            "+420 987 654 321"
+          ],
+          "pattern": "^[+]*[(]{0,1}[0-9]{1,4}[)]{0,1}[-\\s\\./0-9]*$"
+        },
+        "email": {
+          "$id": "#/properties/contact/properties/email",
+          "type": "string",
+          "title": "Contact email address",
+          "default": "",
+          "examples": [
+            "user@email.com"
+          ],
+          "pattern": "^\\w+([\\.-]?\\w+)*@\\w+([\\.-]?\\w+)*(\\.\\w{2,3})+$"
+        },
+        "www": {
+          "$id": "#/properties/contact/properties/www",
+          "type": "string",
+          "title": "Web pages",
+          "default": "",
+          "examples": [
+            "https://www.lesprojekt.cz"
+          ],
+          "pattern": "^(.*)$"
+        }
+      }
+    },
+    "organization": {
+      "$id": "#/properties/organization",
+      "type": "object",
+      "title": "Responsible organization",
+      "description": "The organisation responsible for the creation and maintenance of the metadata",
+      "required": [
+        "name"
+      ],
+      "properties": {
+        "name": {
+          "$id": "#/properties/organization/properties/name",
+          "type": "string",
+          "title": "Organization name",
+          "default": "",
+          "examples": [
+            "Metabusiness inc."
+          ],
+          "pattern": "^(.*)$"
+        },
+        "person": {
+          "$id": "#/properties/organization/properties/person",
+          "type": "string",
+          "title": "Person name (responsible contact)",
+          "default": "",
+          "examples": [
+            "John Olivander"
+          ],
+          "pattern": "^(.*)$"
+        },
+        "address": {
+          "$id": "#/properties/organization/properties/address",
+          "type": "string",
+          "title": "Road, no., PO Box, etc.",
+          "default": "",
+          "examples": [
+            "Sesame Street 145"
+          ],
+          "pattern": "^(.*)$"
+        },
+        "city": {
+          "$id": "#/properties/organization/properties/city",
+          "type": "string",
+          "title": "City",
+          "default": "",
+          "examples": [
+            "Pilsen"
+          ],
+          "pattern": "^(.*)$"
+        },
+        "postalCode": {
+          "$id": "#/properties/organization/properties/postalCode",
+          "type": "string",
+          "title": "Postal code",
+          "default": "",
+          "examples": [
+            "312 00"
+          ],
+          "pattern": "^(.*)$"
+        },
+        "country": {
+          "$id": "#/properties/organization/properties/country",
+          "type": "string",
+          "title": "Country",
+          "default": "",
+          "examples": [
+            "Czech Republic"
+          ],
+          "pattern": "^(.*)$"
+        },
+        "phone": {
+          "$id": "#/properties/organization/properties/phone",
+          "type": "string",
+          "title": "Phone no.",
+          "default": "",
+          "examples": [
+            "+420 987 654 321"
+          ],
+          "pattern": "^[+]*[(]{0,1}[0-9]{1,4}[)]{0,1}[-\\s\\./0-9]*$"
+        },
+        "email": {
+          "$id": "#/properties/organization/properties/email",
+          "type": "string",
+          "title": "Contact email address",
+          "default": "",
+          "examples": [
+            "user@email.com"
+          ],
+          "pattern": "^\\w+([\\.-]?\\w+)*@\\w+([\\.-]?\\w+)*(\\.\\w{2,3})+$"
+        },
+        "www": {
+          "$id": "#/properties/organization/properties/www",
+          "type": "string",
+          "title": "Web pages",
+          "default": "",
+          "examples": [
+            "https://www.lesprojekt.cz"
           ],
           "pattern": "^(.*)$"
         }
