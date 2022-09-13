@@ -1,7 +1,7 @@
 {
   "definitions": {},
   "$schema": "http://json-schema.org/draft-07/schema#",
-  "$id": "https://raw.githubusercontent.com/hslayers/map-compositions/2.1.0/schema.json",
+  "$id": "https://raw.githubusercontent.com/hslayers/map-compositions/2.2.0/schema.json",
   "type": "object",
   "title": "Schema of map compositions supported in Hslayers-ng",
   "required": [
@@ -525,6 +525,7 @@
                 "enum": [
                   "ol.format.KML",
                   "ol.format.GeoJSON",
+                  "ol.format.GPX",
                   "hs.format.WFS",
                   "hs.format.externalWFS",
                   "hs.format.Sparql"
