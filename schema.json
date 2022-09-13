@@ -480,6 +480,16 @@
               true
             ]
           },
+          "greyscale": {
+            "$id": "#/properties/layers/items/properties/greyscale",
+            "type": "boolean",
+            "title": "Greyscale rendering",
+            "description": "Use to render the layer in greyscale on client",
+            "default": false,
+            "examples": [
+              true
+            ]
+          },
           "displayInLayerSwitcher": {
             "$id": "#/properties/layers/items/properties/displayInLayerSwitcher",
             "type": "boolean",
