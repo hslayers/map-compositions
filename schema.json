@@ -1,7 +1,7 @@
 {
   "definitions": {},
   "$schema": "http://json-schema.org/draft-07/schema#",
-  "$id": "https://raw.githubusercontent.com/hslayers/map-compositions/2.2.0/schema.json",
+  "$id": "https://raw.githubusercontent.com/hslayers/map-compositions/3.0.0/schema.json",
   "type": "object",
   "title": "Schema of map compositions supported in Hslayers-ng",
   "required": [
@@ -456,17 +456,18 @@
             "description": "Big type of layer. Currently all raster layers are wms layers and Vector layers are subdivided by protocol property",
             "default": "",
             "enum": [
-              "HSLayers.Layer.WMS",
-              "OpenLayers.Layer.Vector",
+              "WMS",
               "WMS",
               "WFS",
+              "WMTS",
               "Vector",
+              "OpenLayers.Layer.Vector",
               "XYZ",
               "ArcGISRest",
               "StaticImage"
             ],
             "examples": [
-              "HSLayers.Layer.WMS"
+              "WMS"
             ],
             "pattern": "^(.*)$"
           },
