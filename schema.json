@@ -461,7 +461,6 @@
               "WFS",
               "WMTS",
               "Vector",
-              "OpenLayers.Layer.Vector",
               "XYZ",
               "ArcGISRest",
               "StaticImage"
