@@ -604,23 +604,13 @@
           "url": {
             "$id": "#/properties/layers/items/properties/url",
             "type": "string",
-            "title": "URL of WMS service",
-            "description": "WMS service URL. Vector layers which are loaded from file, see #/properties/layers/items/properties/protocol/properties/url property",
+            "title": "URL of map service",
+            "description": "Map service URL. Vector layers which are loaded from file, see #/properties/layers/items/properties/protocol/properties/url property",
             "default": "",
             "examples": [
               "https%3A%2F%2Fgeoportal.kraj-lbc.cz%2Fcgi-bin%2Fmapserv%3Fmap%3D%2Fdata%2Fgis%2FMapServer%2Fprojects%2Fwms%2Fatlas%2Fpuda.map%26"
             ],
             "pattern": "^(.*)$"
-          },
-          "urls": {
-            "$id": "#/properties/layers/items/properties/urls",
-            "type": "array",
-            "title": "Urls array of ArcGISRest service",
-            "description": "Urls array of ArcGISRest service.",
-            "default": "",
-            "examples": [
-              [ "https://example.com/arcgis/rest/services/map_pub/MapServer" ]
-            ]
           },
           "params": {
             "$id": "#/properties/layers/items/properties/params",
