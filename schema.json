@@ -520,7 +520,7 @@
               "examples": [
                 [ "https%3A%2F%2Fgeoportal.kraj-lbc.cz%2Fcgi-bin%2Fmapserv%3Fmap%3D%2Fdata%2Fgis%2FMapServer%2Fprojects%2Fwms%2Fatlas%2Fpuda.map%26version%3D1.3.0%26service%3DWMS%26request%3DGetLegendGraphic%26sld_version%3D1.1.0%26layer%3Dtridyochrany%26format%3Dimage%2Fpng%26STYLE%3Ddefault" ]
               ],
-              "pattern": "^(.*)$"
+              "pattern": "^https?:\\/\\/.*$"
             }
           },
           "protocol": {
@@ -544,7 +544,8 @@
               "url": {
                 "$id": "#/properties/layers/items/properties/protocol/properties/url",
                 "type": "string",
-                "title": "URL to load geojson, kml and other data from"
+                "title": "URL to load geojson, kml and other data from",
+                "pattern": "^https?:\\/\\/.*$"
               }
             }
           },
@@ -610,7 +611,7 @@
             "examples": [
               "https%3A%2F%2Fgeoportal.kraj-lbc.cz%2Fcgi-bin%2Fmapserv%3Fmap%3D%2Fdata%2Fgis%2FMapServer%2Fprojects%2Fwms%2Fatlas%2Fpuda.map%26"
             ],
-            "pattern": "^(.*)$"
+            "pattern": "^https?:\\/\\/.*$"
           },
           "params": {
             "$id": "#/properties/layers/items/properties/params",
