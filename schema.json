@@ -531,12 +531,12 @@
                 "$id": "#/properties/layers/items/properties/protocol/properties/format",
                 "type": "string",
                 "enum": [
-                  "ol.format.KML",
-                  "ol.format.GeoJSON",
-                  "ol.format.GPX",
-                  "hs.format.WFS",
-                  "hs.format.externalWFS",
-                  "hs.format.Sparql"
+                  "KML",
+                  "GeoJSON",
+                  "GPX",
+                  "WFS",
+                  "externalWFS",
+                  "Sparql"
                 ],
                 "title": "Layer procol format"
               },
