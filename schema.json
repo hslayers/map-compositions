@@ -457,7 +457,6 @@
             "default": "",
             "enum": [
               "WMS",
-              "WFS",
               "WMTS",
               "Vector",
               "XYZ",
