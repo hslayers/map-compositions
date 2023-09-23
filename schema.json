@@ -1,7 +1,7 @@
 {
   "definitions": {},
   "$schema": "http://json-schema.org/draft-07/schema#",
-  "$id": "https://raw.githubusercontent.com/hslayers/map-compositions/2.2.0/schema.json",
+  "$id": "https://raw.githubusercontent.com/hslayers/map-compositions/3.0.0/schema.json",
   "type": "object",
   "title": "Schema of map compositions supported in Hslayers-ng",
   "required": [
@@ -456,17 +456,15 @@
             "description": "Big type of layer. Currently all raster layers are wms layers and Vector layers are subdivided by protocol property",
             "default": "",
             "enum": [
-              "HSLayers.Layer.WMS",
-              "OpenLayers.Layer.Vector",
               "WMS",
-              "WFS",
+              "WMTS",
               "Vector",
               "XYZ",
               "ArcGISRest",
               "StaticImage"
             ],
             "examples": [
-              "HSLayers.Layer.WMS"
+              "WMS"
             ],
             "pattern": "^(.*)$"
           },
@@ -521,7 +519,7 @@
               "examples": [
                 [ "https%3A%2F%2Fgeoportal.kraj-lbc.cz%2Fcgi-bin%2Fmapserv%3Fmap%3D%2Fdata%2Fgis%2FMapServer%2Fprojects%2Fwms%2Fatlas%2Fpuda.map%26version%3D1.3.0%26service%3DWMS%26request%3DGetLegendGraphic%26sld_version%3D1.1.0%26layer%3Dtridyochrany%26format%3Dimage%2Fpng%26STYLE%3Ddefault" ]
               ],
-              "pattern": "^(.*)$"
+              "pattern": "^https?:\\/\\/.*$"
             }
           },
           "protocol": {
@@ -533,19 +531,20 @@
                 "$id": "#/properties/layers/items/properties/protocol/properties/format",
                 "type": "string",
                 "enum": [
-                  "ol.format.KML",
-                  "ol.format.GeoJSON",
-                  "ol.format.GPX",
-                  "hs.format.WFS",
-                  "hs.format.externalWFS",
-                  "hs.format.Sparql"
+                  "KML",
+                  "GeoJSON",
+                  "GPX",
+                  "WFS",
+                  "externalWFS",
+                  "Sparql"
                 ],
                 "title": "Layer procol format"
               },
               "url": {
                 "$id": "#/properties/layers/items/properties/protocol/properties/url",
                 "type": "string",
-                "title": "URL to load geojson, kml and other data from"
+                "title": "URL to load geojson, kml and other data from",
+                "pattern": "^https?:\\/\\/.*$"
               }
             }
           },
@@ -605,23 +604,13 @@
           "url": {
             "$id": "#/properties/layers/items/properties/url",
             "type": "string",
-            "title": "URL of WMS service",
-            "description": "WMS service URL. Vector layers which are loaded from file, see #/properties/layers/items/properties/protocol/properties/url property",
+            "title": "URL of map service",
+            "description": "Map service URL. Vector layers which are loaded from file, see #/properties/layers/items/properties/protocol/properties/url property",
             "default": "",
             "examples": [
               "https%3A%2F%2Fgeoportal.kraj-lbc.cz%2Fcgi-bin%2Fmapserv%3Fmap%3D%2Fdata%2Fgis%2FMapServer%2Fprojects%2Fwms%2Fatlas%2Fpuda.map%26"
             ],
-            "pattern": "^(.*)$"
-          },
-          "urls": {
-            "$id": "#/properties/layers/items/properties/urls",
-            "type": "array",
-            "title": "Urls array of ArcGISRest service",
-            "description": "Urls array of ArcGISRest service.",
-            "default": "",
-            "examples": [
-              [ "https://example.com/arcgis/rest/services/map_pub/MapServer" ]
-            ]
+            "pattern": "^https?:\\/\\/.*$"
           },
           "params": {
             "$id": "#/properties/layers/items/properties/params",
